@@ -40,13 +40,13 @@
 <nav id="site-navigation" class="main-navigation" role="navigation">
   <ul>
     
-      <li><a href="/">Home</a></li>
+      <li><a href="/">主页</a></li>
     
       <li><a href="/link">Link</a></li>
     
-      <li><a href="/about">About</a></li>
+      <li><a href="/about">关于</a></li>
     
-      <li><a href="/archives">Archives</a></li>
+      <li><a href="/archives">归档</a></li>
     
   </ul>
 </nav></header>
@@ -85,8 +85,8 @@
 <h3 id="启用http-2的方法"><a href="#启用http-2的方法" class="headerlink" title="启用http/2的方法"></a>启用http/2的方法</h3><blockquote>
 <p>1.模块下载个bbshijiessl，然后用这个模块配置好ssl证书<br>2.手工找到/usr/local/nginx/conf/vhost/域名.conf<br>3.里面最下面把listen 443; 改成 listen 443 ssl http2;<br>4.面板里重启下网站即可</p>
 </blockquote>
-<h3 id="国外主机安装强烈建议先运行screen-防止ssh中断"><a href="#国外主机安装强烈建议先运行screen-防止ssh中断" class="headerlink" title="国外主机安装强烈建议先运行screen,防止ssh中断"></a>国外主机安装强烈建议先运行screen,防止ssh中断</h3><p><code>apt-get install screen (debian)
-yum -y install screen (centos)
+<h3 id="国外主机安装强烈建议先运行screen-防止ssh中断"><a href="#国外主机安装强烈建议先运行screen-防止ssh中断" class="headerlink" title="国外主机安装强烈建议先运行screen,防止ssh中断"></a>国外主机安装强烈建议先运行screen,防止ssh中断</h3><p><code>apt-get install screen (debian)    
+yum -y install screen (centos)  
 screen -S amh</code></p>
 <h3 id="全新安装脚本"><a href="#全新安装脚本" class="headerlink" title="全新安装脚本"></a>全新安装脚本</h3><blockquote>
 <p>wget <a href="http://yuwei.me/amh.sh" target="_blank" rel="external">http://yuwei.me/amh.sh</a> &amp;&amp; chmod 775 amh.sh &amp;&amp; ./amh.sh 2&gt;&amp;1 | tee amh.log</p>
