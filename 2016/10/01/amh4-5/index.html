@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>AMH二次开发 V45版本 | YuWei Blog | new site</title>
+  <meta name="author" content="David Xu">
+  
+  <meta name="description" content="lift">
+  
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="AMH二次开发 V45版本"/>
+  <meta property="og:site_name" content="YuWei Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="YuWei Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div id="page" class="site">
+  <div id="primary" class="content-area">
+
+    <header id="header" class="inner"><div class="site-branding">
+  <h1 class="site-title">
+    <a href="/">YuWei Blog</a>
+  </h1>
+  <p class="site-description">new site</p>
+</div>
+<nav id="site-navigation" class="main-navigation" role="navigation">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/link">Link</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+</nav></header>
+
+    <main id="main" class="site-main posts-loop" role="main">
+      <article class="post article">
+
+  
+  
+    <h3 class="article-title"><span>AMH二次开发 V45版本</span></h3>
+  
+
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2016/10/01/amh4-5/" rel="bookmark">
+        <time class="entry-date published" datetime="2016-10-01T01:29:28.000Z">
+          2016-10-01
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h3 id="开发日志"><a href="#开发日志" class="headerlink" title="开发日志"></a>开发日志</h3><blockquote>
+<p>1.新增php7.0,实现php 5.3 5.4 5.5 5.6 7.0所有版本虚拟主机级的一键切换。<br>2.mysql数据目录迁移到/home/mysqldata,方便统一管理和多分区用户重装系统能保留home分区下的重要数据。<br>3.部分bug修正</p>
+</blockquote>
+<h3 id="以下为旧记录"><a href="#以下为旧记录" class="headerlink" title="以下为旧记录"></a>以下为旧记录</h3><blockquote>
+<p>1.nginx升级到1.9.6,配合新版nginx,openssl编译1.0.2d(nginx专用)<br>2.支持http/2(目前测试中，站点conf文件需要手动加入配置，参考nginx.org)<br>3.支持stream反代<br>4.支持nginx反代和cache_purge(测试功能，配置文件需手动<br>5.修复pid路径错误在服务器重启后不能启动php的错误<br>6.其他一些bug修复</p>
+</blockquote>
+<h3 id="启用http-2的方法"><a href="#启用http-2的方法" class="headerlink" title="启用http/2的方法"></a>启用http/2的方法</h3><blockquote>
+<p>1.模块下载个bbshijiessl，然后用这个模块配置好ssl证书<br>2.手工找到/usr/local/nginx/conf/vhost/域名.conf<br>3.里面最下面把listen 443; 改成 listen 443 ssl http2;<br>4.面板里重启下网站即可</p>
+</blockquote>
+<h3 id="国外主机安装强烈建议先运行screen-防止ssh中断"><a href="#国外主机安装强烈建议先运行screen-防止ssh中断" class="headerlink" title="国外主机安装强烈建议先运行screen,防止ssh中断"></a>国外主机安装强烈建议先运行screen,防止ssh中断</h3><p><code>apt-get install screen (debian)
+yum -y install screen (centos)
+screen -S amh</code></p>
+<h3 id="全新安装脚本"><a href="#全新安装脚本" class="headerlink" title="全新安装脚本"></a>全新安装脚本</h3><blockquote>
+<p>wget <a href="http://yuwei.me/amh.sh" target="_blank" rel="external">http://yuwei.me/amh.sh</a> &amp;&amp; chmod 775 amh.sh &amp;&amp; ./amh.sh 2&gt;&amp;1 | tee amh.log</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+        <div class="article-meta pull-left">
+          
+          
+        </div>
+        
+    </footer>
+  </div>
+</article>
+
+  
+	<div id="comment">
+	
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2016/10/01/amh4-5/" data-title="AMH二次开发 V45版本" data-url="https://blog.yuwei.me/2016/10/01/amh4-5/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"yuweiblog"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+
+
+    </main>
+
+    <footer id="colophon" class="site-footer" role="contentinfo"><p class="site-info">
+  Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+  Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+  </br>
+  
+  &copy; 2016 David Xu
+  
+</p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>

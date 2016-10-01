@@ -57,6 +57,69 @@
 
   
   
+    <h3 class="article-title"><a href="/2016/10/01/amh4-5/"><span>AMH二次开发 V45版本</span></a></h3>
+  
+
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2016/10/01/amh4-5/" rel="bookmark">
+        <time class="entry-date published" datetime="2016-10-01T01:29:28.000Z">
+          2016-10-01
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h3 id="开发日志"><a href="#开发日志" class="headerlink" title="开发日志"></a>开发日志</h3><blockquote>
+<p>1.新增php7.0,实现php 5.3 5.4 5.5 5.6 7.0所有版本虚拟主机级的一键切换。<br>2.mysql数据目录迁移到/home/mysqldata,方便统一管理和多分区用户重装系统能保留home分区下的重要数据。<br>3.部分bug修正</p>
+</blockquote>
+<h3 id="以下为旧记录"><a href="#以下为旧记录" class="headerlink" title="以下为旧记录"></a>以下为旧记录</h3><blockquote>
+<p>1.nginx升级到1.9.6,配合新版nginx,openssl编译1.0.2d(nginx专用)<br>2.支持http/2(目前测试中，站点conf文件需要手动加入配置，参考nginx.org)<br>3.支持stream反代<br>4.支持nginx反代和cache_purge(测试功能，配置文件需手动<br>5.修复pid路径错误在服务器重启后不能启动php的错误<br>6.其他一些bug修复</p>
+</blockquote>
+<h3 id="启用http-2的方法"><a href="#启用http-2的方法" class="headerlink" title="启用http/2的方法"></a>启用http/2的方法</h3><blockquote>
+<p>1.模块下载个bbshijiessl，然后用这个模块配置好ssl证书<br>2.手工找到/usr/local/nginx/conf/vhost/域名.conf<br>3.里面最下面把listen 443; 改成 listen 443 ssl http2;<br>4.面板里重启下网站即可</p>
+</blockquote>
+<h3 id="国外主机安装强烈建议先运行screen-防止ssh中断"><a href="#国外主机安装强烈建议先运行screen-防止ssh中断" class="headerlink" title="国外主机安装强烈建议先运行screen,防止ssh中断"></a>国外主机安装强烈建议先运行screen,防止ssh中断</h3><p><code>apt-get install screen (debian)
+yum -y install screen (centos)
+screen -S amh</code></p>
+<h3 id="全新安装脚本"><a href="#全新安装脚本" class="headerlink" title="全新安装脚本"></a>全新安装脚本</h3><blockquote>
+<p>wget <a href="http://yuwei.me/amh.sh" target="_blank" rel="external">http://yuwei.me/amh.sh</a> &amp;&amp; chmod 775 amh.sh &amp;&amp; ./amh.sh 2&gt;&amp;1 | tee amh.log</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+        <div class="article-meta pull-left">
+          
+          
+        </div>
+        
+        <div class="article-meta pull-right">
+          <span>
+            <i class="icon-comments"></i>
+            <span>
+              <a href="https://blog.yuwei.me/2016/10/01/amh4-5/#comment">Comments</a>
+            </span>
+          </span>
+        </div>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post article">
+
+  
+  
     <h3 class="article-title"><a href="/2016/08/19/hey-wakeup/"><span>Hey Wakeup</span></a></h3>
   
 
